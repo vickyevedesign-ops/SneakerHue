@@ -1,4 +1,4 @@
-/* Sneaker Hues — app.js (vanilla-colorful + #fillable + full PNG export) */
+/* Sneaker Hues â€” app.js (vanilla-colorful + #fillable + full PNG export) */
 const state = {
   activeColor: "#000000",
   slideIndex: 0,
