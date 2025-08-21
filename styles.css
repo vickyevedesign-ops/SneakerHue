@@ -100,8 +100,8 @@ button, input { font-family: inherit; color: inherit; }
 /* Scale icons consistently */
 .palette-cta .btn img {
   display: block;
-  height: 66px;  /* increase icon size */
-  width: 96px;   /* make download same size */
+  height: 86px;  /* increase icon size */
+  width: 136px;   /* make download same size */
 }
 
 
