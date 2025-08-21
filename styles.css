@@ -14,11 +14,10 @@
   --col-gap: 24px;         /* grid gap */
   --row-gap: 24px;
 
-  --header-h: 172px;        /* header height */
+  --header-h: 72px;        /* header height */
   --sidebar-w: 320px;      /* palette width */
   --stage-h: 680px;        /* stage height */
 
-  --radius: 20px;          /* card radius */
 
   --brand-font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial;
 }
