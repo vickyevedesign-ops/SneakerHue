@@ -47,7 +47,7 @@ button, input { font-family: inherit; color: inherit; }
   transition: transform .08s ease, background .2s ease, border-color .2s ease;
 }
 .btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.18); }
-.btn.primary{ background: var(--primary); color:#07130c; border-color: transparent; font-weight: 700; }
+.btn.primary{ background: var(--primary); color:#F9F7EF; border-color: transparent; font-weight: 700; }
 .btn.ghost{ background: #1a1b1e; }
 .btn.tiny{ padding:6px 10px; }
 .header-cta .btn img{ display:block; height: 20px; }
