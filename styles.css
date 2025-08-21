@@ -63,6 +63,18 @@ button, input { font-family: inherit; color: inherit; }
 .palette-header img{ height: 40px; }
 .subcopy{ height: 54px; }
 
+/* new CTA layout inside palette */
+.palette-cta {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.palette-cta .cta-group {
+  display: flex;
+  gap: 10px;
+}
+
 .colorful-wrap{ display:grid; gap: 12px; align-content:start; }
 hex-color-picker{ width: 100%; height: 260px; }
 hex-input{ width: 100%; height: 40px; }
