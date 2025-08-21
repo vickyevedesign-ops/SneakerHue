@@ -83,6 +83,26 @@ button, input { font-family: inherit; color: inherit; }
   margin: 0 auto;     /* centers it under the row above */
 }
 
+/* Remove unused rules */
+.subcopy { display: none; }
+hex-input { display: none; }
+
+/* Adjust color picker wrapper */
+.colorful-wrap {
+  display: grid;
+  gap: 16px;          /* spacing inside palette (picker to CTA) */
+  align-content: start;
+  margin-bottom: 8px; /* tighter gap before CTAs */
+}
+
+/* Adjust CTA spacing */
+.palette-cta {
+  display: grid;
+  gap: 16px;          /* even gap between rows */
+  margin-top: 0;      /* remove extra spacing above */
+}
+
+
 /* Icon-only buttons */
 .palette-cta .btn {
   background: none;
