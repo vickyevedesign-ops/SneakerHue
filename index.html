@@ -39,14 +39,22 @@
 
         <img class="subcopy" src="assets/ui/subcopy.svg" alt="Subcopy"/>
 
-        <details class="overlay-tools">
-          <summary>XD Overlay (dev)</summary>
-          <p>Drop a PNG/JPG export of your XD artboard to align pixel-perfectly.</p>
-          <input type="file" id="overlayFile" accept="image/png,image/jpeg" />
-          <label class="slider-label">Opacity <input type="range" id="overlayOpacity" min="0" max="100" value="40"></label>
-          <button id="toggleOverlay" class="btn tiny ghost">Toggle Overlay</button>
-        </details>
-      </aside>
+        <div class="palette-cta">
+    <div class="cta-group">
+      <button id="eyedropperBtn" class="btn ghost" aria-label="Pick a color">
+        <img src="assets/ui/cta-eyedropper.svg" alt="Eyedropper"/>
+      </button>
+      <button id="resetBtn" class="btn ghost" aria-label="Reset current sneaker">
+        <img src="assets/ui/cta-reset.svg" alt="Restart"/>
+      </button>
+    </div>
+    <button id="downloadBtn" class="btn primary" aria-label="Download your creation">
+      <img src="assets/ui/cta-download.svg" alt="Download"/>
+    </button>
+  </div>
+
+  <details class="overlay-tools"> ... </details>
+</aside>
 
       <section class="stage-wrap">
         <div class="carousel">
