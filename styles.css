@@ -62,7 +62,7 @@ button, input { font-family: inherit; color: inherit; }
   padding: 16px; display:grid; align-content:start; gap: 14px; position: relative;
 }
 .palette-header img{ height: 40px; }
-.subcopy{ height: 124px; }
+.subcopy{ height: 64px; }
 
 .colorful-wrap{ display:grid; gap: 12px; align-content:start; }
 hex-color-picker{ width: 100%; height: 260px; }
