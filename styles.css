@@ -1,6 +1,3 @@
-/* === XD TOKENS (derive from parsed XD) ===
-   Update these values to match your XD exactly (or keep what we've parsed).
-*/
 :root{
   --bg: #F9F7EF;
   --panel: #F9F7EF;
@@ -9,20 +6,19 @@
   --primary: #6df3a6;
   --accent: #7aa2ff;
 
-  --maxw: 1200px;          /* container max width */
-  --gutter: 24px;          /* outer page padding */
-  --col-gap: 24px;         /* grid gap */
+  --maxw: 1200px;
+  --gutter: 24px;
+  --col-gap: 24px;
   --row-gap: 24px;
 
-  --header-h: 72px;        /* header height */
-  --sidebar-w: 320px;      /* palette width */
-  --stage-h: 680px;        /* stage height */
-
+  --header-h: 72px;
+  --sidebar-w: 320px;
+  --stage-h: 680px;
 
   --brand-font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial;
 }
 
-/* Reset-ish */
+/* Reset */
 *{ box-sizing: border-box; }
 html, body { height: 100%; }
 body{
@@ -31,146 +27,212 @@ body{
 }
 button, input { font-family: inherit; color: inherit; }
 
-/* Shell Layout */
-.app-shell{ max-width: var(--maxw); margin:0 auto; padding: var(--gutter); display:grid; gap: var(--row-gap); }
-.app-header{
-  height: var(--header-h); display:flex; align-items:center; justify-content:space-between;
+/* Shell */
+.app-shell {
+  max-width: var(--maxw);
+  margin:0 auto;
+  padding: var(--gutter);
+  display:grid;
+  gap: var(--row-gap);
 }
-.brand{ display:flex; gap:12px; align-items:center; font-weight: 700; letter-spacing:.2px; }
-.logo-dot{ width:14px; height:14px; background:var(--primary); border-radius:50%; filter: drop-shadow(0 0 6px rgba(109,243,166,.5)); }
-.brand-name{ font-size: 18px; }
+.app-header {
+  height: var(--header-h);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  font-weight:700;
+}
+.logo-dot {
+  width:14px; height:14px;
+  background:var(--primary);
+  border-radius:50%;
+  filter: drop-shadow(0 0 6px rgba(109,243,166,.5));
+}
+.brand-name{ font-size:18px; }
 
-.header-cta{ display:flex; gap: 10px; }
+/* Buttons */
 .btn{
-  border:1px solid rgba(255,255,255,.08); background: var(--panel);
-  padding: 10px 14px; border-radius: 999px; cursor: pointer; box-shadow: var(--shadow);
+  border:1px solid rgba(255,255,255,.08);
+  background: var(--panel);
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
   transition: transform .08s ease, background .2s ease, border-color .2s ease;
 }
 .btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.18); }
 .btn.primary{ background: var(--primary); color:#F9F7EF; border-color: transparent; font-weight: 700; }
 .btn.ghost{ background: #1a1b1e; }
 .btn.tiny{ padding:6px 10px; }
-.header-cta .btn img{ display:block; height: 20px; }
 
-.main-grid{
-  display:grid; grid-template-columns: var(--sidebar-w) 1fr; gap: var(--col-gap);
+/* Main Grid */
+.main-grid {
+  display:grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  gap: var(--col-gap);
   min-height: calc(var(--stage-h) + var(--row-gap));
 }
-.palette{
-  background: var(--panel); border: 1px solid rgba(255,255,255,.06); border-radius: var(--radius);
-  padding: 16px; display:grid; align-content:start; gap: 14px; position: relative;
+
+/* Palette */
+.palette {
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: var(--radius);
+  padding:16px;
+  display:grid;
+  align-content:start;
+  gap:16px;
 }
-.palette-header img{ height: 40px; }
-.subcopy{ height: 54px; }
+.palette-header img{ height:40px; }
 
-/* Layout for CTA buttons */
-.palette-cta {
-  display: grid;
-  gap: 16px;          /* spacing between rows */
-  margin-top: 12px;
-}
-
-.palette-cta .cta-group {
-  display: flex;
-  gap: 12px;          /* space between eyedropper + reset */
-  justify-content: center; /* center them horizontally */
-}
-
-/* Center the download button */
-.palette-cta #downloadBtn {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;     /* centers it under the row above */
-}
-
-/* Remove unused rules */
-.subcopy { display: none; }
-hex-input { display: none; }
-
-/* Adjust color picker wrapper */
+/* Color picker wrapper */
 .colorful-wrap {
   display: grid;
-  gap: 16px;          /* spacing inside palette (picker to CTA) */
-  align-content: start;
-  margin-bottom: 8px; /* tighter gap before CTAs */
+  gap:16px;
+  align-content:start;
 }
 
-/* Adjust CTA spacing */
+/* Palette CTA layout */
 .palette-cta {
   display: grid;
-  gap: 16px;          /* even gap between rows */
-  margin-top: 0;      /* remove extra spacing above */
+  gap:12px;       /* vertical gap */
+  margin-top:0;
+}
+.palette-cta .cta-group {
+  display:flex;
+  gap:12px;       /* horizontal gap */
+  justify-content:center;
+}
+.palette-cta #downloadBtn {
+  display:flex;
+  justify-content:center;
+  margin:0 auto;
 }
 
-
-/* Icon-only buttons */
+/* Icon-only CTA buttons */
 .palette-cta .btn {
-  background: none;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  border-radius: 0;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background:none;
+  border:none;
+  box-shadow:none;
+  padding:0;
+  border-radius:0;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
-
-/* Scale icons consistently */
 .palette-cta .btn img {
-  display: block;
-  height: 86px;  /* increase icon size */
-  width: 136px;   /* make download same size */
+  display:block;
+  width:36px;
+  height:36px;
 }
-
-
-
-.colorful-wrap{ display:grid; gap: 12px; align-content:start; }
-hex-color-picker{ width: 100%; height: 260px; }
-hex-input{ width: 100%; height: 40px; }
 
 /* Stage + Carousel */
-.stage-wrap{
-  position: relative; background: var(--panel); border: 1px solid rgba(255,255,255,.06);
-  border-radius: var(--radius); padding: 16px; min-height: var(--stage-h); box-shadow: var(--shadow);
-  display:grid; grid-template-rows: 1fr auto auto; gap: 10px; overflow:hidden;
+.stage-wrap {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: var(--radius);
+  padding:16px;
+  min-height: var(--stage-h);
+  box-shadow: var(--shadow);
+  display:grid;
+  grid-template-rows: 1fr auto auto;
+  gap:10px;
+  overflow:hidden;
 }
-.carousel{ position: relative; height: 100%; display:grid; grid-template-columns: 44px 1fr 44px; align-items:center; }
-.nav{ width: 44px; height: 44px; border-radius: 50%; border:1px solid rgba(255,255,255,.08); background:#1a1b1e; cursor:pointer; display:flex; align-items:center; justify-content:center; }
-.viewport{ overflow:hidden; height:100%; position: relative; }
-.viewport .slide{
-  width: 100%; height: 100%; display:none; align-items:center; justify-content:center;
+.carousel {
+  position: relative;
+  height:100%;
+  display:grid;
+  grid-template-columns: 44px 1fr 44px;
+  align-items:center;
+}
+.nav {
+  width:44px; height:44px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.08);
+  background:#1a1b1e;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.viewport {
+  overflow:hidden;
+  height:100%;
+  position:relative;
+}
+.viewport .slide {
+  width:100%;
+  height:100%;
+  display:none;
+  align-items:center;
+  justify-content:center;
 }
 .viewport .slide[data-active="true"]{ display:flex; }
-.sneaker-stage{ width: 100%; height: 100%; display:flex; align-items:center; justify-content:center; }
-.sneaker-stage svg{ width: 100%; height: auto; max-height: calc(var(--stage-h) - 160px); }
 
-.sneaker-name{ display:flex; justify-content:center; align-items:center; min-height: 40px; }
-.sneaker-name img{ height: 22px; }
+.sneaker-stage {
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.sneaker-stage svg {
+  width:100%;
+  height:auto;
+  max-height: calc(var(--stage-h) - 160px);
+}
 
-.dots{ display:flex; gap: 8px; justify-content:center; padding: 8px 0 0; }
-.dots button{ width: 10px; height: 10px; border-radius: 50%; background: #36373b; border: none; cursor: pointer; }
+.sneaker-name {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:40px;
+}
+.sneaker-name img{ height:22px; }
+
+.dots {
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  padding:8px 0 0;
+}
+.dots button {
+  width:10px; height:10px;
+  border-radius:50%;
+  background:#36373b;
+  border:none;
+  cursor:pointer;
+}
 .dots button[aria-selected="true"]{ background: var(--accent); }
 
-/* XD Overlay image (for pixel-perfect alignment during build) */
-.xd-overlay{
-  position:absolute; inset: 16px; pointer-events:none; opacity: .4; mix-blend-mode: difference; display:none; object-fit: contain;
+/* XD Overlay */
+.xd-overlay {
+  position:absolute;
+  inset:16px;
+  pointer-events:none;
+  opacity:.4;
+  mix-blend-mode:difference;
+  display:none;
+  object-fit:contain;
 }
 
 /* Footer */
-.app-footer{ color: var(--muted); font-size: 13px; }
+.app-footer{ color: var(--muted); font-size:13px; }
 
-/* vanilla-colorful theming via ::part() */
+/* vanilla-colorful */
 hex-color-picker::part(hue), hex-color-picker::part(saturation), hex-color-picker::part(pointer){
-  border-radius: 10px;
-}
-hex-input::part(input){
-  background:#101114; border:1px solid rgba(255,255,255,.08); border-radius: 10px; padding:10px 12px; color: var(--text);
+  border-radius:10px;
 }
 
 /* Responsive */
-@media (max-width: 980px){
-  .main-grid{ grid-template-columns: 1fr; }
+@media (max-width:980px){
+  .main-grid{ grid-template-columns:1fr; }
   .stage-wrap{ order:-1; }
 }
