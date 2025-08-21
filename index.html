@@ -22,19 +22,19 @@
     </header>
 
     <main class="main-grid">
-      <aside class="palette" aria-label="Color palette">
-        <div class="palette-header">
-          <img src="assets/ui/headline.svg" alt="Headline"/>
-        </div>
+   <aside class="palette" aria-label="Color palette">
+  <div class="palette-header">
+    <img src="assets/ui/headline.svg" alt="Headline"/>
+  </div>
 
-        <div class="colorful-wrap">
-          <hex-color-picker id="picker"></hex-color-picker>
-          <hex-input id="hexInput"></hex-input>
-        </div>
+  <div class="colorful-wrap">
+    <hex-color-picker id="picker"></hex-color-picker>
+    <hex-input id="hexInput"></hex-input>
+  </div>
 
-        <img class="subcopy" src="assets/ui/subcopy.svg" alt="Subcopy"/>
+  <img class="subcopy" src="assets/ui/subcopy.svg" alt="Subcopy"/>
 
-        <div class="palette-cta">
+  <div class="palette-cta">
     <div class="cta-group">
       <button id="eyedropperBtn" class="btn ghost" aria-label="Pick a color">
         <img src="assets/ui/cta-eyedropper.svg" alt="Eyedropper"/>
@@ -48,8 +48,15 @@
     </button>
   </div>
 
-  <details class="overlay-tools"> ... </details>
+  <details class="overlay-tools">
+    <summary>XD Overlay (dev)</summary>
+    <p>Drop a PNG/JPG export of your XD artboard to align pixel-perfectly.</p>
+    <input type="file" id="overlayFile" accept="image/png,image/jpeg" />
+    <label class="slider-label">Opacity <input type="range" id="overlayOpacity" min="0" max="100" value="40"></label>
+    <button id="toggleOverlay" class="btn tiny ghost">Toggle Overlay</button>
+  </details>
 </aside>
+
 
       <section class="stage-wrap">
         <div class="carousel">
