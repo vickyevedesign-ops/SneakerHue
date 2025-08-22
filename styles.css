@@ -33,20 +33,12 @@ button, input { font-family: inherit; color: inherit; }
 
 /* Shell Layout */
 .app-shell{ max-width: var(--maxw); margin:0 auto; padding: var(--gutter); display:grid; gap: var(--row-gap); }
-.app-header {
-  height: var(--header-h);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* align logo left */
-  padding: 0; /* remove extra spacing */
+.app-header{
+  height: var(--header-h); display:flex; align-items:center; justify-content:space-between;
 }
-
-.brand-logo {
-  height: 40px;   /* adjust as needed */
-  display: block;
-  margin-left: var(--gutter); /* 👈 aligns with palette edge */
-}
-
+.brand{ display:flex; gap:12px; align-items:center; font-weight: 700; letter-spacing:.2px; }
+.logo-dot{ width:14px; height:14px; background:var(--primary); border-radius:50%; filter: drop-shadow(0 0 6px rgba(109,243,166,.5)); }
+.brand-name{ font-size: 18px; }
 
 .header-cta{ display:flex; gap: 10px; }
 .btn{
@@ -139,17 +131,10 @@ hex-color-picker{ width: 100%; height: 260px; }
 hex-input{ width: 100%; height: 40px; }
 
 /* Stage + Carousel */
-.stage-wrap {
-  /* was: padding: 16px; */
-  padding: 8px 16px 16px; /* less top padding */
-}
-
-.sneaker-stage svg {
-  /* was: max-height: calc(var(--stage-h) - 160px); */
-  max-height: calc(var(--stage-h) - 80px); /* lifts sneaker higher */
-}
-
-
+.stage-wrap{
+  position: relative; background: var(--panel); border: 1px solid rgba(255,255,255,.06);
+  border-radius: var(--radius); padding: 16px; min-height: var(--stage-h); box-shadow: var(--shadow);
+  display:grid; grid-template-rows: 1fr auto auto; gap: 10px; overflow:hidden;
 }
 .carousel{ position: relative; height: 100%; display:grid; grid-template-columns: 44px 1fr 44px; align-items:center; }
 .nav{ width: 44px; height: 44px; border-radius: 50%; border:1px solid rgba(255,255,255,.08); background:#F9F7EF; cursor:pointer; display:flex; align-items:center; justify-content:center; }
