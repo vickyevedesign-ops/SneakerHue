@@ -33,12 +33,20 @@ button, input { font-family: inherit; color: inherit; }
 
 /* Shell Layout */
 .app-shell{ max-width: var(--maxw); margin:0 auto; padding: var(--gutter); display:grid; gap: var(--row-gap); }
-.app-header{
-  height: var(--header-h); display:flex; align-items:center; justify-content:space-between;
+.app-header {
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* align logo left */
+  padding: 0; /* remove extra spacing */
 }
-.brand{ display:flex; gap:12px; align-items:center; font-weight: 700; letter-spacing:.2px; }
-.logo-dot{ width:14px; height:14px; background:var(--primary); border-radius:50%; filter: drop-shadow(0 0 6px rgba(109,243,166,.5)); }
-.brand-name{ font-size: 18px; }
+
+.brand-logo {
+  height: 40px;   /* adjust as needed */
+  display: block;
+  margin-left: var(--gutter); /* 👈 aligns with palette edge */
+}
+
 
 .header-cta{ display:flex; gap: 10px; }
 .btn{
