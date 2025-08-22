@@ -182,3 +182,28 @@ hex-input::part(input){
   .main-grid{ grid-template-columns: 1fr; }
   .stage-wrap{ order:-1; }
 }
+/* === Sneaker slide animations === */
+.slide {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: absolute; /* stack slides on top of each other */
+  inset: 0;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.slide[data-active="true"] {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.slide[data-exit="true"] {
+  opacity: 0;
+  transform: translateX(-50px);
+  z-index: 1;
+}
