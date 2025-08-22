@@ -144,7 +144,7 @@ hex-input{ width: 100%; height: 40px; }
   background: var(--panel);
   border: 1px solid rgba(255,255,255,.06);
   border-radius: var(--radius);
-  padding: 16px;                   /* 👈 this is why it looks pushed down */
+  padding: 0 16px 16px;   /* top=0, right=16, bottom=16, left=16 */
   min-height: var(--stage-h);
   box-shadow: var(--shadow);
   display: grid;
