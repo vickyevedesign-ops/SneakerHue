@@ -144,16 +144,14 @@ hex-input{ width: 100%; height: 40px; }
   background: var(--panel);
   border: 1px solid rgba(255,255,255,.06);
   border-radius: var(--radius);
-  padding: 0 16px 16px;     /* flush top, spacing on sides/bottom */
+  padding: 16px;                   /* 👈 this is why it looks pushed down */
   min-height: var(--stage-h);
   box-shadow: var(--shadow);
   display: grid;
-  grid-template-rows: auto 1fr auto; /* 👈 top content first, sneaker flexible, name last */
-  align-items: start;                /* 👈 make sure everything hugs the top */
+  grid-template-rows: 1fr auto auto;
   gap: 10px;
   overflow: hidden;
 }
-
 
 }
 .carousel{ position: relative; height: 100%; display:grid; grid-template-columns: 44px 1fr 44px; align-items:center; }
