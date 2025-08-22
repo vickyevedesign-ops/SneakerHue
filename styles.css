@@ -140,18 +140,15 @@ hex-input{ width: 100%; height: 40px; }
 
 /* Stage + Carousel */
 .stage-wrap {
-  position: relative;
-  background: var(--panel);
-  border: 1px solid rgba(255,255,255,.06);
-  border-radius: var(--radius);
-  padding: 0 16px 16px;   /* top=0, right=16, bottom=16, left=16 */
-  min-height: var(--stage-h);
-  box-shadow: var(--shadow);
-  display: grid;
-  grid-template-rows: 1fr auto auto;
-  gap: 10px;
-  overflow: hidden;
+  /* was: padding: 16px; */
+  padding: 8px 16px 16px; /* less top padding */
 }
+
+.sneaker-stage svg {
+  /* was: max-height: calc(var(--stage-h) - 160px); */
+  max-height: calc(var(--stage-h) - 80px); /* lifts sneaker higher */
+}
+
 
 }
 .carousel{ position: relative; height: 100%; display:grid; grid-template-columns: 44px 1fr 44px; align-items:center; }
