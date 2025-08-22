@@ -215,3 +215,41 @@ document.addEventListener("DOMContentLoaded", async ()=>{
   initOverlayTools();
   await loadSlides();
 });
+
+const slides = document.querySelectorAll('.slide');
+let current = 0;
+
+function showSlide(next) {
+  if (next === current) return;
+
+  const currentSlide = slides[current];
+  const nextSlide = slides[next];
+
+  // mark current as exiting
+  currentSlide.removeAttribute('data-active');
+  currentSlide.setAttribute('data-exit', 'true');
+
+  // activate next
+  nextSlide.setAttribute('data-active', 'true');
+
+  // cleanup exit state after animation
+  setTimeout(() => {
+    currentSlide.removeAttribute('data-exit');
+  }, 500);
+
+  current = next;
+}
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+  const next = (current + 1) % slides.length;
+  showSlide(next);
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+  const next = (current - 1 + slides.length) % slides.length;
+  showSlide(next);
+});
+
+// initialize first slide
+slides[0].setAttribute('data-active', 'true');
+
