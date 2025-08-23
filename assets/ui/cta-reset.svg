@@ -1,7 +1,6 @@
-
-<svg xmlns="http://www.w3.org/2000/svg" width="101" height="54" viewBox="0 0 101 54">
+<svg xmlns="http://www.w3.org/2000/svg" width="129" height="54" viewBox="0 0 129 54">
   <g id="Group_11" data-name="Group 11" transform="translate(-1532 -652)">
-    <rect id="Rectangle_20" data-name="Rectangle 20" width="101" height="54" transform="translate(1532 652)" fill="#262522"/>
-    <text id="RESTART" transform="translate(1555 683)" fill="#f9f7ef" font-size="15" font-family="AccessMN-Medium, Access MN" font-weight="500"><tspan x="0" y="0">RESTART</tspan></text>
+    <rect id="Rectangle_20" data-name="Rectangle 20" width="129" height="54" transform="translate(1532 652)" fill="#262522"/>
+    <text id="RESTART" transform="translate(1569 683)" fill="#f9f7ef" font-size="15" font-family="AccessMN-Medium, Access MN" font-weight="500"><tspan x="0" y="0">RESTART</tspan></text>
   </g>
 </svg>
