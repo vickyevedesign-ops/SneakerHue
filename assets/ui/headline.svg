@@ -1,4 +1,7 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" width="263" height="46" viewBox="0 0 263 46">
-  <text id="Fill_the_sneaker_with_WHATEVER_COLOUR_YOUR_HEART_DESIRES_" data-name="Fill the sneaker with WHATEVER COLOUR YOUR HEART DESIRES!" fill="#262522" font-size="15" font-family="AccessMN-Medium, Access MN" font-weight="500"><tspan x="0" y="11">FILL THE SNEAKER WITH WHATEVER </tspan><tspan x="0" y="28">COLOUR YOUR HEART DESIRES!</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="530" height="63" viewBox="0 0 530 63">
+  <g id="Group_43" data-name="Group 43" transform="translate(-82 -66)">
+    <text id="SNEAKERHues" transform="translate(82.5 96)" font-size="40" font-family="AccessMN-Medium, Access MN" font-weight="500"><tspan x="0" y="0">SNEAKERHUES</tspan></text>
+    <text id="Fill_the_sneaker_with_WHATEVER_COLOUR_YOUR_HEART_DESIRES_" data-name="Fill the sneaker with WHATEVER COLOUR YOUR HEART DESIRES!" transform="translate(82 126)" fill="#262522" font-size="19" font-family="AccessMN-Medium, Access MN" font-weight="500"><tspan x="0" y="0">FILL THE SNEAKER WITH WHATEVER COLOUR YOUR HEART DESIRES!</tspan></text>
+  </g>
 </svg>
